@@ -31,5 +31,11 @@ Serial.println(" cm");
 delay(100);
 }
 ______________________________________________
+13/05/2024 - Foi utilizado o sensor infravermelho TCRT5000 como substituto do HW201. A substituição se mostrou eficiente. O sensor  TCRT5000 é mais fácil de ser ajustado e possui maior sensibilidade eficiente, além de sofrer menos anomalias provenientes da luz ambiente.
+
+
+
+
+
 
 
