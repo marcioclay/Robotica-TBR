@@ -1,1 +1,25 @@
+#define HW201_PIN 2 // Pino digital onde o sensor HW-201 está conectado
 
+void setup() {
+  Serial.begin(9600);
+  pinMode(HW201_PIN, INPUT); // Define o pino do sensor como entrada
+}
+
+void loop() {
+  int sensorValue = digitalRead(HW201_PIN); // Lê o valor do sensor
+
+  // Se o sensor detectar a cor preta (o objeto está próximo)
+  if (sensorValue == 1) {
+    sensorValue = true;
+    Serial.println("preto");
+    // Execute sua ação aqui, por exemplo, acender um LED
+    // digitalWrite(LED_PIN, HIGH); // Ligar um LED
+  } else {
+    Serial.println("Nenhum objeto detectado.");
+    //print(sersorValue); 
+    // Execute outra ação aqui, se necessário
+    // digitalWrite(LED_PIN, LOW); // Desligar o LED
+  }
+
+  delay(75); // Pequeno atraso para estabilidade
+}
